@@ -32,11 +32,9 @@ After 48 hours the LEDs were still turning on in sync every six seconds.
 <h3>AsyncDelay</h3>
 This library is a series of creative macros and everything, including documentation, is in the .h file.
 The constructor creates an expired timer, which means, immediately true. There is no way to pause, stop or suspend a timer and I was unable to make my async blink pattern work.
-My test code: AsyncDelay_BlinkAsync3
 
 <h3>AsyncTimer</h3>
 This library uses a lambda, which I don't grok. The coding is quite convoluted and the complexity kind of defeats the purpose of simplifying the use of millis(). Within minutes of starting the sketch, the LED patterns were hopelessly out of synch.
-My test code: AsncTimer-BlinkAsync.ino -- 
 
 <h3>BlockNot</h3>
 https://github.com/EasyG0ing1/BlockNot
