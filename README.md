@@ -83,6 +83,6 @@ After only a couple of hours, the timers were out of sync.
 # ALib0.h
 <h3 align="center">Strange name, but interesting library</h3>
 
-ALib0 was mentioned on a thread in the Arduino forums in a comment by DrDiettrich.
+ALib0 was mentioned on a thread in the Arduino forums in a comment by DrDiettrich. ALib0 ([Github site.](https://github.com/DrDiettrich/ALib0)) is a translation of the [original](https://github.com/CombiesGit/TaskMacro) in German.
 
 My search led me to a fork of the original (TaskMacros) in DrDiettrich's [Github site.](https://github.com/DrDiettrich/ALib0)
