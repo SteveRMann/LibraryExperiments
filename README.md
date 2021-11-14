@@ -38,6 +38,7 @@ This library uses a lambda, which I don't grok. The coding is quite convoluted a
 
 <h3>BlockNot</h3>
 https://github.com/EasyG0ing1/BlockNot
+
 This library is a recent addition to the Arduino Library Manager, so maybe still under development? This is by far one of the best documented libraries I have ever seen. It get an "A+" for documentation. This library has a NO_RESET method that stops the timer after it expires, making it a one-shot. It's the only timer library with this needed feature. BlockNot kept synchronization for 48 hours.
 
 [My test code](src/BlockNot-BlinkAsync.ino)
