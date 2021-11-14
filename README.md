@@ -85,4 +85,10 @@ After only a couple of hours, the timers were out of sync.
 
 ALib0 was mentioned on a thread in the Arduino forums in a comment by DrDiettrich. ALib0 ([Github site.](https://github.com/DrDiettrich/ALib0)) is a translation of the [original](https://github.com/CombiesGit/TaskMacro) in German.
 
-My search led me to a fork of the original (TaskMacros) in DrDiettrich's [Github site.](https://github.com/DrDiettrich/ALib0)
+The library description on the German site calls TaskLib as 
+> An Arduino Lib to make cooperative multitasking clear.
+This library hides a large part of the complexity from the programmer.
+
+<b>So, why did this library make it into my <i>Timer Library TExperiments</i> discussion?</b>
+
+It occurred to me that if I could blink each LED in an asychronous task, then I could accomplish the same pattern without a timer library.
