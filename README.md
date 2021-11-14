@@ -79,3 +79,5 @@ The library example sketches fail. I did not try to fix it.
 After only a couple of hours, the timers were out of sync. 
 
 [My test code](src/timeObj-BlinkAsync.ino)
+
+# ALib0.h
