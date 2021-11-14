@@ -1,5 +1,5 @@
 # LibraryExperiments
-A summary of my tests of various timer libraries.
+<h3 align="center">A summary of my tests of various timer libraries.</h3>
 
 
 Every Arduino programmer eventually runs into the problems of blocking code.  Most often from using delay().  The millis() function is the obvious solution but implementing it is messy.  There are several timer libraries in the Arduino IDE library management catalog that are intended to replace the delay() function.  I tested 10 of them here.
