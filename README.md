@@ -85,4 +85,4 @@ After only a couple of hours, the timers were out of sync.
 
 ALib0 was mentioned on a thread in the Arduino forums in a comment by DrDiettrich.
 
-My search led me to a fork of the original in DrDiettrich's Github site.
+My search led me to a fork of the original (TaskMacros) in DrDiettrich's [Github site.](https://github.com/DrDiettrich/ALib0)
