@@ -68,7 +68,7 @@ This library has very good documentation in the README.md file. And a remarkably
 <h3>Ticker</h3>
 The Arduino Ticker Library allows you to easily create Ticker callbacks, which can call a function at a predetermined interval.
 
-[My test code]()
+[My test code](src/TickerAsync.ino)
 
 <h3>TimeoutCallback</h3>
 The library example sketches fail. I did not try to fix it.
