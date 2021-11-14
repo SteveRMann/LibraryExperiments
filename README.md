@@ -59,8 +59,9 @@ The example sketches work, but the library generates easily fixed warnings; lazy
 [My test code](src/neoTimer-BlinkAsync.ino)
 
 <h3>NoDelay</h3>
-This library has very good documentation in the README.md file. And a remarkably well commented .cpp file.  After 48 hours the sequences are still in sync.
 https://github.com/M-tech-Creations/NoDelay
+
+This library has very good documentation in the README.md file. And a remarkably well commented .cpp file.  After 48 hours the sequences are still in sync.
 
 [My test code](src/NoDelay-BlinkAsync.ino)
 
