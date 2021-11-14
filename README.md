@@ -66,8 +66,9 @@ This library has very good documentation in the README.md file. And a remarkably
 [My test code](src/NoDelay-BlinkAsync.ino)
 
 <h3>Ticker</h3>
-The Arduino Ticker Library allows you to easily create Ticker callbacks, which can call a function at a predetermined interval. I never could get the LEDs to synchronize.
-My test code: TickerAsync.ino
+The Arduino Ticker Library allows you to easily create Ticker callbacks, which can call a function at a predetermined interval.
+
+[My test code]()
 
 <h3>TimeoutCallback</h3>
 The library example sketches fail. I did not try to fix it.
