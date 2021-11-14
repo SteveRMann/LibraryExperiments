@@ -61,7 +61,8 @@ The example sketches work, but the library generates easily fixed warnings; lazy
 <h3>NoDelay</h3>
 This library has very good documentation in the README.md file. And a remarkably well commented .cpp file.  After 48 hours the sequences are still in sync.
 https://github.com/M-tech-Creations/NoDelay
-My test code: NoDelay_BlinkAsync.ino
+
+[My test code](src/NoDelay-BlinkAsync.ino)
 
 <h3>Ticker</h3>
 The Arduino Ticker Library allows you to easily create Ticker callbacks, which can call a function at a predetermined interval. I never could get the LEDs to synchronize.
