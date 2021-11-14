@@ -4,7 +4,7 @@
 
 Every Arduino programmer eventually runs into the problems of blocking code.  Most often from using delay().  The millis() function is the obvious solution but implementing it is messy.  There are several timer libraries in the Arduino IDE library management catalog that are intended to replace the delay() function.  I tested 10 of them here.
 
-I also discovered another library that would accomplish the same asynchronous LED sequence, but it is not a timer library.  Details [here]
+I also discovered another library (ALib0.h) that would accomplish the same asynchronous LED sequence, but it is not a timer library.  Details [here](README.md#alib0h).
 
 <h2>Testing criteria:</h2>
 For the purposes of this test, "at the same time" means within a few instruction cycles. I don't need to be schooled that microprocessors can only do one thing at a time.
