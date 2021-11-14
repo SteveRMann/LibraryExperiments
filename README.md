@@ -1,2 +1,82 @@
 # LibraryExperiments
 A summary of my tests of various timer libraries.
+
+
+Every Arduino programmer eventually runs into the problems of blocking code.  Most often from using delay().  The millis() function is the obvious solution but implementing it is messy.  There are several timer libraries in the Arduino IDE library management catalog that are intended to replace the delay() function.  I tested 10 of them here.
+
+#Testing criteria:
+For the purposes of this test, "at the same time" means within a few instruction cycles. I don't need to be schooled that microprocessors can only do one thing at a time.
+
+The test consisted of blinking three LEDs in asynchronous patterns.  This image illustrates the blink pattern.
+All LEDs start their timing at the same time, flash asynchronously then coincidentally turn simultaneously on every six seconds.
+
+[image here]
+
+#Test criteria:
+The timers should operate independently of each other. For example, one timer starting cannot depend on another timer ending.  Using one timer to trigger another is not independent because it would not work with timers that have no repeating coincidence. Adding a more timers should have no effect overall. Five of the ten libraries tested meet this criteria.
+
+There should be no limit to how many timers are running (within hardware or memory constraints).
+
+In order to replace the delay() function the replacement library should be at least more straightforward than implementing millis().  All of the tested libraries fail this criteria. One spectacularly as the user needs to write a lambda in their code. Even experienced Arduino programmers are stumped by lambdas. Hardly what I would call easy to implement).
+
+Worse, some of the timers couldn't keep time accurately over hours or days of running. One couldn't maintain accuracy for more than a few seconds.
+
+To pass my test, the LEDS should faithfully follow the blink pattern in the image above which coincidentally repeats every six seconds.  In my discussion of the various timers, this coincidence is how I determined the accuracy of the timers. I.E., every six seconds all LEDS will turn on simultaneously.
+
+----------
+#millis()
+First, I used the millis() function as a baseline.
+After 48 hours the LEDs were still turning on in sync every six seconds.
+My test code: millis_BlinkAsync.ino
+
+----------
+#AsyncDelay	
+This library is a series of creative macros and everything, including documentation, is in the .h file.
+The constructor creates an expired timer, which means, immediately true. There is no way to pause, stop or suspend a timer and I was unable to make my async blink pattern work.
+My test code: AsyncDelay_BlinkAsync
+
+----------
+#AsyncTimer
+This library uses a lambda, which I don't grok. The coding is quite convoluted and the complexity kind of defeats the purpose of simplifying the use of millis(). Within minutes of starting the sketch, the LED patterns were hopelessly out of synch.
+My test code: AsncTimer-BlinkAsync.ino -- 
+
+----------
+#BlockNot
+https://github.com/EasyG0ing1/BlockNot
+This library is a recent addition to the Arduino Library Manager, so maybe still under development? This is by far one of the best documented libraries I have ever seen. It get an "A+" for documentation. This library has a NO_RESET method that stops the timer after it expires, making it a one-shot. It's the only timer library with this needed feature. BlockNot kept synchronization for 48 hours.
+My test code: BlockNot-BilnkAsync.ino
+
+----------
+#GyverTimer
+When you create the timer object, it starts. So, in setup you have to use the stop() function, then when ready to begin the timers, call the start() function. I give the documentation a "C". It's sparse, but mostly there.  After 48 hours running, the timers are still in sync
+My test code: GyverTimer-GTimer_BlinkAsync.ino
+
+----------
+#IntervalCallback
+When you create the timer, it starts.  I can't create the object and then start the timer later and there is no way to change the timing period short of destroying the object and create a new one. It is pretty simple as libraries go, but the documentation is sparse and comments in the file are nonexistent. After 18 hours the three LEDS are still synchronized.
+My test code: IntervalCallback-BlinkAsync.ino
+
+----------
+#neotimer
+The example sketches work, but the library generates warnings; lazy coding. This library has a few other methods such as repeat() and reset(), neither of which I evaluated.  TheLEDS are still synchronized after a few hours.
+My test code: neoTimer-BlinkAsync.ino
+
+----------
+#NoDelay
+This library has very good documentation in the README.md file. And a remarkably well commented .cpp file.  After 48 hours the sequences are still in sync.
+https://github.com/M-tech-Creations/NoDelay
+My test code: NoDelay_BlinkAsync.ino
+
+----------
+#Ticker
+The Arduino Ticker Library allows you to easily create Ticker callbacks, which can call a function at a predetermined interval. I never could get the LEDs to synchronize.
+My test code: TickerAsync.ino
+
+----------
+#TimeoutCallback
+The library example sketches fail. I did not try to fix it.
+
+----------
+#timeObj
+After only a couple of hours, the timers were out of sync. There were also warnings during the compile.
+My test code: timeObj-BlinkAsync.ino
