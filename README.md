@@ -74,5 +74,6 @@ The Arduino Ticker Library allows you to easily create Ticker callbacks, which c
 The library example sketches fail. I did not try to fix it.
 
 <h3>timeObj</h3>
-After only a couple of hours, the timers were out of sync. There were also warnings during the compile.
-My test code: timeObj-BlinkAsync.ino
+After only a couple of hours, the timers were out of sync. 
+
+[My test code]()
