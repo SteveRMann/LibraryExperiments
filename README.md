@@ -26,8 +26,6 @@ To pass my test, the LEDS should faithfully follow the blink pattern in the imag
 <h3>millis()</h3>
 First, I used the millis() function as a baseline.
 After 48 hours the LEDs were still turning on in sync every six seconds.
-My test code: millis_BlinkAsync.ino
-
 [My test code](src/millis_BlinkAsync3)
 
 <h3>AsyncDelay</h3>
