@@ -93,4 +93,6 @@ This library hides a large part of the complexity from the programmer.
 
 It occurred to me that if I could blink each LED in an asychronous task, then I could accomplish the same pattern without a timer library.
 
-Here is [My test code](src/timeObj-BlinkAsync.ino)
+Here is [My test code](src/ALib0-MultipleTasks.ino)
+
+I haven't worked out how to coordinate the timers, but I mention this library because of the multitasking ability it provides.  There is also an easy to use button function here.
