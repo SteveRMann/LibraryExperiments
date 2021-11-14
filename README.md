@@ -45,7 +45,8 @@ This library is a recent addition to the Arduino Library Manager, so maybe still
 
 <h3>GyverTimer</h3>
 When you create the timer object, it starts. So, in setup you have to use the stop() function, then when ready to begin the timers, call the start() function. I give the documentation a "C". It's sparse, but mostly there.  After 48 hours running, the timers are still in sync
-My test code: GyverTimer-GTimer_BlinkAsync.ino
+
+[My test code](src/GyverTimer-BlinkAsync.ino)
 
 <h3>IntervalCallback</h3>
 When you create the timer, it starts.  I can't create the object and then start the timer later and there is no way to change the timing period short of destroying the object and create a new one. It is pretty simple as libraries go, but the documentation is sparse and comments in the file are nonexistent. After 18 hours the three LEDS are still synchronized.
