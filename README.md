@@ -49,8 +49,9 @@ When you create the timer object, it starts. So, in setup you have to use the st
 [My test code](src/GyverTimer-BlinkAsync.ino)
 
 <h3>IntervalCallback</h3>
-When you create the timer, it starts.  I can't create the object and then start the timer later and there is no way to change the timing period short of destroying the object and create a new one. It is pretty simple as libraries go, but the documentation is sparse and comments in the file are nonexistent. After 18 hours the three LEDS are still synchronized.
-My test code: IntervalCallback-BlinkAsync.ino
+When you create the timer, it starts.  I can't create the object and then start the timer later and there is no way to change the timing period short of destroying the object and create a new one. It is pretty simple as libraries go, but the documentation is sparse and comments in the file are nonexistent. IntervalCallback does fail the criteria of independence as the only way I could sync the timers was to use one timer end to trigger another timer start.
+
+[My test code](src/IntervalCallback-BlinkAsync.ino)
 
 <h3>neotimer</h3>
 The example sketches work, but the library generates warnings; lazy coding. This library has a few other methods such as repeat() and reset(), neither of which I evaluated.  TheLEDS are still synchronized after a few hours.
