@@ -10,7 +10,7 @@ For the purposes of this test, "at the same time" means within a few instruction
 The test consisted of blinking three LEDs in asynchronous patterns.  This image illustrates the blink pattern.
 All LEDs start their timing at the same time, flash asynchronously then coincidentally turn on simultaneously every six seconds.
 
-![This is an image](Async3.jpg)
+![Blink Pattern](Async3.jpg)
 
 The timers should operate independently of each other. For example, one timer starting cannot depend on another timer ending.  Using one timer to trigger another is not independent because it would not work with timers that have no repeating coincidence. Adding a more timers should have no effect overall. Five of the ten libraries tested meet this criteria.
 
