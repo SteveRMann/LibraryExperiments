@@ -81,3 +81,8 @@ After only a couple of hours, the timers were out of sync.
 [My test code](src/timeObj-BlinkAsync.ino)
 
 # ALib0.h
+<h3 align="center">Strange name, but interesting library</h3>
+
+ALib0 was mentioned on a thread in the Arduino forums in a comment by DrDiettrich.
+
+My search led me to a fork of the original in DrDiettrich's Github site.
