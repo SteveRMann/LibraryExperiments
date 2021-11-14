@@ -92,3 +92,5 @@ This library hides a large part of the complexity from the programmer.
 <b>So, why did this library make it into my <i>Timer Library TExperiments</i> discussion?</b>
 
 It occurred to me that if I could blink each LED in an asychronous task, then I could accomplish the same pattern without a timer library.
+
+Here is [My test code](src/timeObj-BlinkAsync.ino)
