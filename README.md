@@ -1,4 +1,4 @@
-# Timer LibraryExperiments
+# Timer Library Experiments
 <h3 align="center">A summary of my tests of various timer libraries.</h3>
 
 
