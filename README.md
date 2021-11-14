@@ -54,8 +54,9 @@ When you create the timer, it starts.  I can't create the object and then start 
 [My test code](src/IntervalCallback_BlinkAsync.ino)
 
 <h3>neotimer</h3>
-The example sketches work, but the library generates easily fixed warnings; lazy coding.  TheLEDS are still synchronized after a few hours.
-My test code: neoTimer-BlinkAsync.ino
+The example sketches work, but the library generates easily fixed warnings; lazy coding.  The LEDS are still synchronized after a few hours.
+
+[My test code](src/neoTimer-BlinkAsync.ino)
 
 <h3>NoDelay</h3>
 This library has very good documentation in the README.md file. And a remarkably well commented .cpp file.  After 48 hours the sequences are still in sync.
