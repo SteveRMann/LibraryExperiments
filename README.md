@@ -4,7 +4,7 @@
 
 Every Arduino programmer eventually runs into the problems of blocking code.  Most often from using delay().  The millis() function is the obvious solution but implementing it is messy.  There are several timer libraries in the Arduino IDE library management catalog that are intended to replace the delay() function.  I tested 10 of them here.
 
-##Testing criteria:
+<h2>Testing criteria:</h2>
 For the purposes of this test, "at the same time" means within a few instruction cycles. I don't need to be schooled that microprocessors can only do one thing at a time.
 
 The test consisted of blinking three LEDs in asynchronous patterns.  This image illustrates the blink pattern.
@@ -23,7 +23,7 @@ Worse, some of the timers couldn't keep time accurately over hours or days of ru
 To pass my test, the LEDS should faithfully follow the blink pattern in the image above which coincidentally repeats every six seconds.  In my discussion of the various timers, this coincidence is how I determined the accuracy of the timers. I.E., every six seconds all LEDS will turn on simultaneously.
 
 
-###millis()
+<h3>millis()</h3>
 First, I used the millis() function as a baseline.
 After 48 hours the LEDs were still turning on in sync every six seconds.
 My test code: millis_BlinkAsync.ino
